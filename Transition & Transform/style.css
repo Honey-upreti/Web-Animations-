@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+.marquee-wrapper {
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  /* gap: 2rem; */
+  overflow: hidden;
+}
+
+.marquee-track {
+  height: 100%;
+  width: 100%;
+  background-color: blue;
+  flex-shrink: 0;
+  animation: marque-animation 5.3s linear infinite;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* gap: 3rem; */
+}
+.marquee-track img {
+  height: 90%;
+  object-fit: cover;
+}
+
+@keyframes marque-animation {
+  from{
+    transform: translateX(0%);
+  }
+  to{
+    transform: translateX(-100%);
+  }
+}
