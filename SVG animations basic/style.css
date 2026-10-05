@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #010101;
+}
+
+.signature {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: animate 2s linear infinite alternate;
+}
+
+@keyframes animate {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.ball {
+  offset-path: path(
+    "M1.00021 13.2912C3.29354 12.7632 13.2029 8.1712 20.9762 3.34987C27.6978 -0.819152 34.9309 1.37653 40.1816 3.68054C44.6516 5.64201 47.5603 10.9552 50.9442 18.6832C53.5142 24.5523 55.0375 31.0299 56.9016 36.7365C59.4855 44.6471 62.8616 47.7712 64.3656 49.3685C69.0868 54.3828 78.8456 50.8059 82.5869 48.9445C86.7831 46.8569 90.7602 43.8832 95.5575 40.7712C102.083 36.538 106.227 31.9685 115.542 23.1045C122.041 16.9197 131.646 13.4725 140.432 13.8192C146.408 17.3712 151.555 20.2139 155.726 22.4299C157.608 23.5899 159.016 24.8219 161 28.2245"
+  );
+  offset-rotate: 90deg;
+  animation: distance-animation 1s linear infinite alternate;
+}
+
+@keyframes distance-animation {
+  from {
+    offset-distance: 0;
+  }
+  to {
+    offset-distance: 100%;
+  }
+}
